@@ -1,7 +1,8 @@
 :root {
-    --primary-color: #005BAA;
-    --primary-rgb: 0, 91, 170;
-    --primary-hover: #0578dc;
+    --primary-color: #FFD800;
+    --primary-rgb: 255, 216, 0;
+    --primary-hover: #e8c500;
+    --primary-gradient: linear-gradient(var(--primary-color), #b69a02);
 
     --gray-900: #111827;
     --gray-800: #1f2937;
@@ -13,19 +14,19 @@
     --gray-200: #e5e7eb;
     --gray-100: #f3f4f6;
 
-    --size-xs: .8rem;
-    --size-sm: .9rem;
-    --size-md: 1rem;
-    --size-lg: 1.1rem;
-    --size-xl: 1.2rem;
-    --size-xxl: 1.3rem;
-    --size-xxxl: 1.4rem;
+    --size-xs: .7em;
+    --size-sm: .85em;
+    --size-md: 1em;
+    --size-lg: 1.15em;
+    --size-xl: 1.3em;
+    --size-xxl: 1.45em;
+    --size-xxxl: 1.6em;
 
     --shadow-primary: 0 2px 8px 0 rgb(0 0 0 / 10%);
     --shadow-hover: 0 2px 8px 0 rgb(0 0 0 / 20%);
 
     --transition: .3s all ease-in-out;
-    --font-theme: 'Roboto', sans-serif;
+    --font-theme: 'Sarabun', sans-serif;
 }
 
 .bgc-primary {
@@ -44,14 +45,11 @@
     background-color: var(--primary-color);
 }
 
-html {
-    font-size: 14px;
-}
 
 body {
     position: relative;
     width: 100%;
-    background-color: var(--bs-white);
+    background-color: var(--bs-light);
     color: var(--gray-700);
     font: 400 14px/1.4 var(--font-theme);
     font-style: normal;
