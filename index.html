@@ -192,7 +192,7 @@
 	</div>
 </div>
 
-<header id="header" class="header bgc-primary">
+<header id="header" class="header">
 	<div class="container">
 		<div class="header-grid d-flex align-items-center">
 			<div class="header-logo">
@@ -229,6 +229,15 @@
 					</li>
 				</ul>
 			</div>
+			<div class="ms-auto ps-3 d-flex d-lg-none">
+				<button type="button" class="hamburger-icon" id="hamburgerIcon">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="header-overlay" id="header-overlay"></div>
 		</div>
 	</div>
 </header>
@@ -244,8 +253,8 @@
 			</div>
 			<div class="form-group w-100">
 				<div class="container">
-					<div class="row g-3 justify-content-center">
-						<div class="col-lg-4">
+					<div class="row g-2 g-md-3 justify-content-center">
+						<div class="col-md-4 col-6">
 							<div class="position-relative form-item initDropdown" data-step="1">
 								<span class="initDropdown-btn">--- Chọn khu vực ---</span>
 								<ul class="list-unstyled mb-0 form-list">
@@ -261,7 +270,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-4 col-6">
 							<div class="position-relative form-item initDropdown" data-step="2">
 								<span class="initDropdown-btn">--- Chọn vị trí ---</span>
 								<ul class="list-unstyled mb-0 form-list">
@@ -277,7 +286,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-2">
+						<div class="col-md-3 col-lg-2">
 							<div class="position-relative form-item">
 								<button class="button-theme">Xem chi tiết</button>
 							</div>
@@ -291,7 +300,7 @@
 		<div class="container">
 			<div class="row g-2">
 				<div class="col-lg-8">
-					<div class="section-item section-slider">
+					<div class="section-item section-slider" id="slider-hero">
 						<div class="swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -336,6 +345,7 @@
 								</div>
 							</div>
 						</div>
+						<div class="swiper-pagination"></div>
 					</div>
 					<div class="section-item section-salary">
 						<div class="salary-card card">
@@ -799,7 +809,50 @@
 </main>
 
 <footer id="footer" class="footer">
-
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<div class="footer-title">
+					CÔNG TY CỔ PHẦN TMDV 30SHINE
+				</div>
+				<div class="footer-text">
+					<i class="fal fa-map-marker-alt me-1"></i> 82 Trần Đại Nghĩa, P Đồng Tâm, Q Hai Bà Trưng, HN
+				</div>
+				<div class="footer-text">
+					<i class="fal fa-phone-alt me-1"></i> 0909.090.909 - 0808.808.080
+				</div>
+				<div class="footer-text">
+					<i class="fal fa-envelope me-1"></i> example@gamil.com
+				</div>
+				<div class="footer-text">
+					Số giấy chứng nhận kinh doanh: <b>010.7467.693</b>.&nbsp;
+					Ngày cấp: <b>08/06/2016</b>.&nbsp;
+					Nơi cấp: <b>Sở kế hoạch đầu tư TP Hà Nội</b>.
+				</div>
+				<div class="footer-social">
+					<ul class="list-unstyled mb-0">
+						<li>
+							<a href="" target="_blank"><i
+									class="fab fa-facebook-f"></i></a>
+						</li>
+						<li>
+							<a href="" target="_blank"><i
+									class="fab fa-instagram"></i></a>
+						</li>
+						<li>
+							<a href="" target="_blank"><i class="fab fa-tiktok"></i></a>
+						</li>
+						<li>
+							<a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-copyright">
+					Copyright 2022 30Shine, Inc. All Rights Reserved
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
 
 <script type=" text/javascript" src="./assets/libs/jquery.min.js"></script>
