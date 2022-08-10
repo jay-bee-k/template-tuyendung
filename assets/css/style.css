@@ -311,14 +311,20 @@
     margin-top: 1rem;
 }
 
-.salary-card {
+.section-item + .section-item {
+    margin-top: 1rem;
+}
+
+.salary-card,
+.position-card {
     border: 0;
     overflow: hidden;
     -webkit-box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
     box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 
-.salary-card .card-header {
+.salary-card .card-header,
+.position-card .card-header {
     background-color: var(--primary-color);
     padding: 10px 10px 11px;
     font-size: calc(var(--size-lg) + .1em);
@@ -381,6 +387,56 @@
     border-top: 1px solid var(--gray-200);
 }
 
+.position-card .card-body .position-item .position-collapse {
+    background-color: #fafafa;
+    border: 0;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: var(--size-md);
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.position-card .card-body .position-item .position-collapse:before {
+    position: absolute;
+    font-family: "Font Awesome 5 Pro";
+    font-size: var(--size-xxl);
+    color: var(--gray-800);
+    content: "\f107";
+    transform: translateY(-50%);
+    top: 50%;
+    left: 15px;
+    transition: var(--transition);
+    font-weight: 300;
+}
+
+.position-card .card-body .position-item .position-collapse[aria-expanded=false]:before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.position-card .card-body .position-item .position-list {
+    padding: 15px;
+}
+
+.position-card .card-body .position-item .position-list > ul > li > a {
+    display: block;
+    padding: 4px 0;
+    font-size: calc(var(--size-md) + 0.05em);
+    color: var(--gray-800);
+}
+
+.position-card .card-body .position-item .position-list > ul > li > a:hover {
+   text-decoration: underline;
+}
+
+.position-card .card-body .position-item + .position-item {
+    border-top: 1px solid var(--gray-200);
+}
+
 .article-card {
     border: 0;
     overflow: hidden;
@@ -429,19 +485,22 @@
     border-top: 1px solid var(--gray-200);
 }
 
-.modal-theme.modal-theme_article .modal-header {
+.modal-theme.modal-theme_article .modal-header,
+.modal-theme.modal-theme_apply .modal-header {
     border-bottom: 0;
     position: relative;
     padding-right: 50px;
 }
 
-.modal-theme.modal-theme_article .modal-header .modal-title {
+.modal-theme.modal-theme_article .modal-header .modal-title,
+.modal-theme.modal-theme_apply .modal-header .modal-title {
     font-size: var(--size-xl);
     font-weight: 700;
     color: var(--gray-900);
 }
 
-.modal-theme.modal-theme_article .modal-header .button-close {
+.modal-theme.modal-theme_article .modal-header .button-close,
+.modal-theme.modal-theme_apply .modal-header .button-close {
     position: absolute;
     top: 12px;
     right: 5px;
@@ -458,8 +517,176 @@
     background-color: transparent;
 }
 
-.modal-theme.modal-theme_article .modal-header .button-close:hover {
+.modal-theme.modal-theme_article .modal-header .button-close:hover,
+.modal-theme.modal-theme_apply .modal-header .button-close:hover {
     color: var(--gray-900);
+}
+
+.modal-theme.modal-theme_job .modal-header .button-close {
+    position: absolute;
+    top: 12px;
+    right: 5px;
+    border: 0;
+    padding: 0;
+    padding-top: 2px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: var(--bs-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-800);
+    font-size: var(--size-xxl);
+    transition: var(--transition);
+    z-index: 3;
+    line-height: 1;
+}
+
+.modal-theme.modal-theme_job .modal-header .button-apply {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    background: var(--primary-gradient);
+    height: 40px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    color: var(--bs-white);
+    font-size: calc(var(--size-md) + .1em);
+    font-weight: 700;
+    padding: 8px 25px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px #ccc;
+    z-index: 5;
+}
+
+.modal-theme.modal-theme_apply .modal-header {
+    background-color: var(--primary-color);
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.modal-theme.modal-theme_apply .modal-body {
+    padding: .75rem;
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item label {
+    font-weight: 900;
+    font-size: var(--size-md);
+    margin-bottom: .25rem;
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .form-control {
+    height: 44px;
+    padding: 7px 15px 10px;
+    border-color: var(--gray-200);
+    width: 100%;
+    font-size: calc(var(--size-md) + .1em);
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .form-control::placeholder {
+    color: var(--gray-400);
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .initDropdown-btn {
+    background-color: var(--bs-white);
+    height: 44px;
+    border-radius: 0.25rem;
+    border: 1px solid var(--gray-200);
+    padding: 10px 45px 10px 15px;
+    display: block;
+    width: 100%;
+    font-size: calc(var(--size-md) + .1em);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+    color: var(--gray-400);
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .initDropdown-btn.is-value {
+    color: var(--gray-800);
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .initDropdown-btn:before {
+    position: absolute;
+    font-family: "Font Awesome 5 Pro";
+    font-size: var(--size-xl);
+    color: var(--gray-800);
+    content: "\f107";
+    transform: translateY(-50%);
+    top: 50%;
+    right: 15px;
+    transition: var(--transition);
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .form-list {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--bs-white);
+    border-radius: .25rem;
+    border: 1px solid var(--gray-200);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scaleY(0.7);
+    -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-origin: top;
+    z-index: 3;
+    -webkit-box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    padding: 5px 0;
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .form-list > li > a {
+    position: relative;
+    display: block;
+    padding: 7px 12px;
+    overflow: hidden;
+    color: var(--gray-700);
+    font-size: var(--size-md);
+    cursor: pointer;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .form-list > li > a:hover,
+.modal-theme.modal-theme_apply .modal-body .form-item .form-list > li > a.is-active {
+    background-color: #e6f7ff
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .initDropdown.is-show .form-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scaleY(1);
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .initDropdown.is-show > span:before {
+    transform: rotate(180deg) translateY(50%);
+}
+
+.modal-theme.modal-theme_apply .modal-body .form-item .button-theme {
+    background: var(--primary-gradient);
+    height: 40px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    color: var(--bs-white);
+    font-size: calc(var(--size-md) + .1em);
+    font-weight: 700;
+    padding: 8px 25px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .modal-theme .modal-body {
@@ -473,6 +700,41 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
+}
+
+.modal-theme .modal-body h2 {
+    font-weight: 800;
+    color: #000;
+    font-size: 1.4rem;
+}
+
+.modal-theme .modal-body h3 {
+    font-weight: 800;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.modal-theme .modal-body h4 {
+    font-weight: 800;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.modal-theme .modal-body h5 {
+    font-weight: 800;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.modal-theme .modal-body h6 {
+    font-weight: 800;
+    color: #000;
+    font-size: 1rem;
+}
+
+.modal-theme .modal-body p,
+.modal-theme .modal-body ul {
+    margin-bottom: .5rem;
 }
 
 .modal-theme .modal-body p:last-child,

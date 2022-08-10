@@ -35,7 +35,7 @@
                     step = parseInt(elmParent.data('step')) + 1;
 
                 elmParent.removeClass('is-show');
-                elmParent.children('.initDropdown-btn').html(value);
+                elmParent.children('.initDropdown-btn').html(value).addClass('is-value');
 
                 elmParent.find('.initDropdown_value').removeClass('is-active');
                 btn.addClass('is-active');
