@@ -311,6 +311,76 @@
     margin-top: 1rem;
 }
 
+.salary-card {
+    border: 0;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.salary-card .card-header {
+    background-color: var(--primary-color);
+    padding: 10px 10px 11px;
+    font-size: calc(var(--size-lg) + .1em);
+    font-weight: 700;
+    color: var(--gray-900);
+    border-bottom: 0;
+    text-transform: uppercase;
+}
+
+.salary-item {
+    position: relative;
+    display: flex;
+    padding: 15px;
+}
+
+.salary-item .salary-content {
+    width: 100%;
+}
+
+.salary-item .salary-content .salary-title {
+    font-size: var(--size-lg);
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.25rem;
+}
+
+.salary-item .salary-content .salary-text {
+    font-size: calc(var(--size-md) + .05em);
+    color: var(--gray-800);
+}
+
+.salary-item .salary-label {
+    width: 100px;
+    padding-left: 10px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.salary-item .salary-label .label {
+    text-align: center;
+    color: var(--bs-white);
+    text-transform: uppercase;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    padding: 3px;
+    max-width: 70px;
+    font-size: var(--size-md);
+    font-weight: 700;
+}
+
+.salary-item .salary-label .label.label-hot {
+    background-color: #eb2222;
+}
+
+.salary-item .salary-label .label.label-new {
+    background-color: var(--primary-color);
+}
+
+.salary-item + .salary-item {
+    border-top: 1px solid var(--gray-200);
+}
+
 .article-card {
     border: 0;
     overflow: hidden;
@@ -327,10 +397,12 @@
     border-bottom: 0;
     text-transform: uppercase;
 }
+
 .article-item_card {
     border: 0;
     border-radius: 0;
 }
+
 .article-item_card .card-body .card-title {
     font-size: var(--size-lg);
     overflow: hidden;
@@ -350,7 +422,7 @@
     -webkit-line-clamp: 4;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    color: var(--gray-600);
+    color: var(--gray-800);
 }
 
 .article-item_card + .article-item_card {
