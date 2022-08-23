@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #FFD800;
-    --primary-rgb: 255, 216, 0;
-    --primary-hover: #e8c500;
-    --primary-gradient: linear-gradient(var(--primary-color), #b69a02);
+    --primary-color: #CA1391;
+    --primary-rgb: 202, 19, 145;
+    --primary-hover: #820d5c;
+    --primary-gradient: linear-gradient(var(--primary-color), var(--primary-hover));
 
     --gray-900: #111827;
     --gray-800: #1f2937;
